@@ -1,6 +1,3 @@
-Perfeito! Aqui está um **README.md profissional** para o seu projeto **EduAtípico**, já estruturado para frontend React + backend Flask com PostgreSQL e JWT:
-
----
 
 ```markdown
 # EduAtípico
