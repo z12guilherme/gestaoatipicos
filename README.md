@@ -1,73 +1,109 @@
-# Welcome to your Lovable project
+Perfeito! Aqui está um **README.md profissional** para o seu projeto **EduAtípico**, já estruturado para frontend React + backend Flask com PostgreSQL e JWT:
 
-## Project info
+---
 
-**URL**: https://lovable.dev/projects/83ac0e06-d5ef-4c59-a198-8a69e35a6992
+```markdown
+# EduAtípico
 
-## How can I edit this code?
+EduAtípico é um sistema de gestão escolar completo, com dashboards para diferentes tipos de usuários (Admin, Cuidador, Responsável, Student), gerenciamento de alunos, notas e laudos, desenvolvido com **React, Tailwind CSS e shadcn-ui** no frontend e **Flask + SQLAlchemy + PostgreSQL + JWT** no backend.
 
-There are several ways of editing your application.
+## Tecnologias
 
-**Use Lovable**
+### Frontend
+- React + TypeScript
+- Tailwind CSS
+- shadcn-ui
+- Vite
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/83ac0e06-d5ef-4c59-a198-8a69e35a6992) and start prompting.
+### Backend
+- Flask
+- SQLAlchemy
+- PostgreSQL
+- JWT Authentication
+- Flask-CORS
+- WerkZeug (hash de senhas)
 
-Changes made via Lovable will be committed automatically to this repo.
+## Funcionalidades
 
-**Use your preferred IDE**
+- Login/logout com JWT
+- Dashboard baseado em roles:
+  - **Admin**: gerencia usuários e alunos
+  - **Cuidador/Responsável**: visualiza e gerencia alunos vinculados
+  - **Student**: visualiza notas e laudos
+- CRUD completo para:
+  - Alunos
+  - Notas
+  - Laudos
+  - Usuários (Admin)
+- Segurança:
+  - Hash de senhas
+  - Controle de acesso por roles
+- Integração frontend-backend via API RESTful
+- Configuração via `.env` para banco de dados e secret key
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Estrutura do Projeto
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```
 
-Follow these steps:
+gestaoatipicos/
+│
+├─ backend/
+│   ├─ app.py
+│   ├─ models.py
+│   ├─ routes/
+│   │   ├─ auth.py
+│   │   ├─ students.py
+│   │   ├─ notas.py
+│   │   ├─ laudos.py
+│   │   └─ users.py
+│   ├─ config.py
+│   └─ requirements.txt
+│
+├─ frontend/
+│   └─ (React + Tailwind + shadcn-ui)
+│
+└─ .env
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+````
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Instalação
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Backend
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+pip install -r requirements.txt
+flask run
+````
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Frontend
+
+```bash
+cd frontend
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+> O frontend se comunica com o backend via endpoints API RESTful. Configure `.env` com `DATABASE_URL` e `SECRET_KEY`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Contribuição
 
-**Use GitHub Codespaces**
+Contribuições são bem-vindas! Abra uma issue ou pull request para melhorias e correções.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Licença
 
-## What technologies are used for this project?
+Este projeto está sob a licença MIT.
 
-This project is built with:
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+Se você quiser, posso **fazer uma versão ainda mais “mágica”** que já inclua:  
+- Badges de status de build  
+- Links de deploy do frontend/backend  
+- Instruções de teste rápido para login e CRUD  
 
-Simply open [Lovable](https://lovable.dev/projects/83ac0e06-d5ef-4c59-a198-8a69e35a6992) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Quer que eu faça essa versão avançada do README?
+```
